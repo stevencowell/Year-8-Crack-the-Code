@@ -23,8 +23,8 @@ Videos were selected to teach the adjacent topic and are student-controlled. Eac
 
 - Hero photograph generated for this site from a project-specific technical brief. No student identity, school branding or readable proprietary text is included.
 - Section diagrams are original, code-native instructional graphics generated from the taught signal, decision or evidence path.
+- The original CTC-DG-02 board-orientation diagram uses the approximate component layout shown in the public MAAS `GET.(ON).WITH.IT` ThinkerShield publication. The authorised Drive masters remain controlling for current pin labels: <https://maas-website-media.s3.amazonaws.com/maas.museum/uploads/2016/10/GetOnWithIt-v1-2-ONLINE.pdf>.
 
 ## Facts intentionally left unset
 
 Current dates, marks, rubric, lesson allocation, equipment access, room controls, file naming, Drive location, collaboration rules and Classroom submission route are all Teacher to confirm.
-

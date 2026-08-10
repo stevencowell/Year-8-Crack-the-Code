@@ -1,6 +1,6 @@
 # Crack the Code Busy Work manifest
 
-- Build ID: `crack-the-code-busy-work-v1-20260811`
+- Build ID: `crack-the-code-busy-work-v2-20260811`
 - Scope: 20 course-specific activities, two for each of the ten taught modules
 - Intended duration: about 20 minutes per activity
 - Evidence model: immediate checks plus a saved student reflection; device-local autosave only
@@ -36,7 +36,10 @@
 - Navigation: Busy Work appears in the shared student menu and beside Project Activities on the home page.
 - Folio: completion and reflections appear in the student folio without changing existing theory or project-activity storage keys.
 - Printing: the landing page prints the full evidence set; individual activities include a Print evidence action.
+- Visual evidence: each activity now contains one purpose-built course diagram, accurate alt text, a written explanation and an `Open larger` link. The same diagram is used in its directly corresponding Project Activity only.
+- Theory help: every activity links to its precise taught theory section through a cache-versioned route, wrong-answer feedback repeats that exact route without revealing the answer, and pointer or keyboard activation lands on a contained target heading below the sticky header at exactly 390 px.
+- Accessibility: every table, slider, select, input and evidence field has a meaningful spoken name as well as its visible context.
 
 ## QA verdict
 
-PASS — all 20 activities render from direct routes, preserve answers after reload, give immediate feedback, expose meaningful written evidence, and reflow without horizontal overflow at 390 px.
+LOCAL PASS - all 20 activities render from direct routes with one matched visual each, preserve answers after reload, give immediate feedback with precise theory help, expose meaningful written evidence, print as a complete 41-page A4 evidence set with visible activity headings, and contain named controls without page overflow at 390 px. Every `Open larger` link now reaches a stable repository SVG route. Independent visual, experience and student-clarity re-audits remain pending before publication.
