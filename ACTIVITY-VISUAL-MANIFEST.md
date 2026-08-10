@@ -53,8 +53,8 @@ Each Project Activity uses the two diagrams for its matching module. Each of tho
 - Exact labels and values are sourced from the current course data and Busy Work tasks.
 - Desktop Project Activities use a full-width diagram for readable labels.
 - At 390 px, diagrams remain inside the page, provide a swipe instruction and expose `Open larger`.
-- Project Activity print produced 31 A4 pages. SHA-256: `4F6D514AAE22D50162E89172FC2A1EB50C4AAA628DA70B2820EAEE5284FFD55C`.
-- Busy Work print produced 41 A4 pages with activity headings, diagrams and evidence controls. SHA-256: `51636FD11980108DAEBD0BC76B2EA61B8142EAB3A468E6641E19EFBADC946F55`.
+- Project Activity print produced 31 A4 pages. SHA-256: `EBBB63F611829D33C49EF0B83AA1BED3F05C51157685C67BAE6A77C196FEDA78`.
+- Busy Work print produced 41 A4 pages with activity headings, diagrams and evidence controls. SHA-256: `7FF9D21248F21673AF13C345E8B59BE989E961A60AD2BC7AAF285C15A8B06C65`.
 - Final route QA: 10 Project Activity routes, 20 Busy Work routes and 20 direct SVG routes passed at desktop and 390 px; `Open larger`, autosave/reload, accessible control names, precise theory-help links, linked module containment and both print paths passed.
 
 Producer status: `Complete`  

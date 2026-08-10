@@ -42,4 +42,4 @@
 
 ## QA verdict
 
-LOCAL PASS - all 20 activities render from direct routes with one matched visual each, preserve answers after reload, give immediate feedback with precise theory help, expose meaningful written evidence, print as a complete 41-page A4 evidence set with visible activity headings, and contain named controls without page overflow at 390 px. Every `Open larger` link now reaches a stable repository SVG route. Independent visual, experience and student-clarity re-audits remain pending before publication.
+LOCAL PASS - the hub and all 20 direct activity routes render without console errors, each activity includes one matched visual, answers persist after reload, feedback provides precise theory help, written evidence prints as a complete 41-page A4 set, and named controls remain contained at 390 px. Every `Open larger` link reaches a stable repository SVG route.

@@ -128,7 +128,7 @@
     BUSY_WORK_ACTIVITIES.forEach(activity=>{const done=localStorage.getItem(`${prefix}completed:${activity.id}`)==='true';if(done)complete++;const status=done?'Complete':'Not complete';document.querySelector(`[data-hub-status="${activity.id}"]`).textContent=status;document.querySelector(`[data-activity-id="${activity.id}"] [data-activity-status]`).textContent=status;});
     progressText.textContent=`${complete} of ${BUSY_WORK_ACTIVITIES.length} complete`;progressBar.style.width=`${complete/BUSY_WORK_ACTIVITIES.length*100}%`;
   }
-  function openHash(){const target=document.querySelector(location.hash);if(target?.matches('details'))target.setAttribute('open','');}
+  function openHash(){if(!location.hash)return;const target=document.querySelector(location.hash);if(target?.matches('details'))target.setAttribute('open','');}
   addEventListener('hashchange',openHash);openHash();updateProgress();
   let closedBeforePrint=[];
   addEventListener('beforeprint',()=>{
