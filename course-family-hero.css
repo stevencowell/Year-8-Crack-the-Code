@@ -29,7 +29,6 @@
 
 /* Task 34: retain the shared intro and the actual pathway; routes remain in navigation. */
 .course-family-intro + .signal-strip,
-.course-family-intro + .signal-strip + section,
 #modules + section,
 .syllabus-band {
   display: none !important;

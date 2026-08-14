@@ -1,0 +1,140 @@
+
+/* Crack the Code front-page module cards: explicit final layout over shared pathway rules. */
+.modules-section .module-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 14px 16px !important;
+  list-style: none !important;
+  margin: 24px 0 0 !important;
+  padding: 0 !important;
+}
+.modules-section .module-grid > li {
+  list-style: none !important;
+  margin: 0 !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+}
+.modules-section .module-grid > li > a.module-card {
+  align-items: stretch !important;
+  background: #fff !important;
+  border: 1px solid #c5d8e4 !important;
+  border-radius: 18px !important;
+  box-shadow: 0 6px 18px rgba(7,40,59,.07) !important;
+  color: #10283b !important;
+  display: grid !important;
+  grid-template-columns: 70px minmax(0,1fr) 42px !important;
+  height: auto !important;
+  max-height: none !important;
+  min-height: 138px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: relative !important;
+  text-align: left !important;
+  text-decoration: none !important;
+  transform: none !important;
+  width: 100% !important;
+}
+.modules-section .module-grid > li > a.module-card:hover,
+.modules-section .module-grid > li > a.module-card:focus-visible {
+  border-color: #6f9db0 !important;
+  box-shadow: 0 12px 26px rgba(7,40,59,.13) !important;
+  transform: translateY(-2px) !important;
+}
+.modules-section .module-grid > li > a.module-card::before {
+  content: none !important;
+  display: none !important;
+}
+.modules-section .module-grid > li > a.module-card::after {
+  align-self: center !important;
+  color: #0b6f8a !important;
+  content: "→" !important;
+  display: block !important;
+  font-size: 1.25rem !important;
+  font-weight: 850 !important;
+  grid-column: 3 !important;
+  grid-row: 1 !important;
+  inset: auto !important;
+  justify-self: center !important;
+  line-height: 1 !important;
+  position: static !important;
+  transform: none !important;
+}
+.modules-section .module-grid > li > a.module-card > span:first-child {
+  align-items: center !important;
+  align-self: stretch !important;
+  background: #dcebf1 !important;
+  border-radius: 0 !important;
+  color: #10283b !important;
+  display: flex !important;
+  font-size: 1rem !important;
+  font-weight: 950 !important;
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  height: auto !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  width: auto !important;
+}
+.modules-section .module-grid > li:nth-child(2n) > a.module-card > span:first-child { background: #f6dfb8 !important; }
+.modules-section .module-grid > li:nth-child(4n+3) > a.module-card > span:first-child { background: #dce5ef !important; }
+.modules-section .module-grid > li:nth-child(4n) > a.module-card > span:first-child { background: #e8ddd5 !important; }
+.modules-section .module-grid > li > a.module-card > div {
+  align-self: stretch !important;
+  color: #10283b !important;
+  display: flex !important;
+  flex-direction: column !important;
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  opacity: 1 !important;
+  padding: 1rem .8rem 1rem 1.1rem !important;
+  visibility: visible !important;
+}
+.modules-section .module-grid .module-stage {
+  color: #0b6f8a !important;
+  display: block !important;
+  font-size: .78rem !important;
+  font-weight: 850 !important;
+  letter-spacing: .02em !important;
+  line-height: 1.2 !important;
+  margin: 0 0 .32rem !important;
+  opacity: 1 !important;
+  text-transform: none !important;
+  visibility: visible !important;
+}
+.modules-section .module-grid > li > a.module-card strong {
+  color: #071a2b !important;
+  display: block !important;
+  font-size: 1.05rem !important;
+  font-weight: 850 !important;
+  line-height: 1.25 !important;
+  margin: 0 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.modules-section .module-grid > li > a.module-card p {
+  color: #536b7b !important;
+  display: -webkit-box !important;
+  font-size: .88rem !important;
+  line-height: 1.4 !important;
+  margin: .38rem 0 0 !important;
+  opacity: 1 !important;
+  overflow: hidden !important;
+  visibility: visible !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 2 !important;
+}
+@media (max-width: 720px) {
+  .modules-section .module-grid {
+    grid-template-columns: minmax(0,1fr) !important;
+    gap: 12px !important;
+  }
+  .modules-section .module-grid > li > a.module-card {
+    grid-template-columns: 62px minmax(0,1fr) 38px !important;
+    min-height: 126px !important;
+  }
+  .modules-section .module-grid > li > a.module-card > div {
+    padding-left: .9rem !important;
+  }
+}
