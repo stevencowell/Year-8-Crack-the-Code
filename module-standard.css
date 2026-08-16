@@ -5,7 +5,6 @@
   --module-card-gap: 24px;
   --module-collapse: 680px;
 }
-
 .module-standard-page .module-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -93,4 +92,3 @@
     white-space: normal;
   }
 }
-
