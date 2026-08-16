@@ -2,6 +2,7 @@
   const moduleId = Number(document.body.dataset.module);
   const data = COURSE_MODULES.find(item => item.id === moduleId);
   if (!data) return;
+  document.body.classList.add('module-standard-page');
 
   const cues = {
     '1.1':['INPUT','PROCESS','OUTPUT','Follow information through the complete control system.'], '1.2':['ARDUINO','SKETCH','BEHAVIOUR','The microcontroller runs the sketch that gives the shield behaviour.'], '1.3':['PIN MAP','CONSTRAINT','RELIABLE TEST','Fixed connections make code and evidence repeatable.'],
@@ -40,14 +41,20 @@
   document.title = `Module ${data.id}: ${data.title} | Crack the Code`;
   document.querySelector('[data-module-header]').innerHTML = `<p class="eyebrow">Module ${data.id} of ${COURSE_MODULES.length}</p><h1>${data.title}</h1><p class="lede">${data.subtitle}</p>`;
   document.querySelector('[data-contents]').innerHTML = data.sections.map((s,i) => `<li><a href="#section-${i+1}">${s.title}</a></li>`).join('');
-  const presentation = `<aside class="module-presentation"><div><p class="eyebrow">Module presentation</p><h2>Learn with the slides</h2><p>This eight-slide presentation teaches the three sections, includes retrieval practice and models the response process without revealing quiz answers.</p><p class="fine">PowerPoint file · 8 slides · student learning notes</p></div><a class="button tomato presentation-download" href="../resources/presentations/${presentationFiles[moduleId-1]}" download>Download Module ${moduleId} PowerPoint</a></aside>`;
-  document.querySelector('[data-theory]').innerHTML = presentation + data.sections.map((section,i) => {
+  const presentation = `<aside class="module-presentation module-overview"><div><p class="eyebrow">Module presentation</p><h2>Preview, learn and save evidence</h2><p>This eight-slide presentation teaches the three sections, includes retrieval practice and models the response process without revealing quiz answers.</p><p class="fine">PowerPoint file · 8 slides · student learning notes</p></div><a class="button tomato presentation-download" href="../resources/presentations/${presentationFiles[moduleId-1]}" download>Download Module ${moduleId} PowerPoint</a></aside>`;
+  document.querySelector('[data-theory]').innerHTML = data.sections.map((section,i) => {
     const key = `${moduleId}.${i+1}`;
     return `<section class="theory-block" id="section-${i+1}"><h2>${section.title}</h2>${section.html}</section>${diagram(key)}${video(COURSE_VIDEOS[key], key.replace('.','-'))}<details class="section-learning" id="check-${section.learningId}"><summary><span>Learning activity ${key}</span><strong>10 questions + written response</strong></summary><div class="section-learning-body"><p>Answer all ten questions. Feedback returns you to this precise theory section when you need another look.</p><div data-section-check="${section.learningId}">${section.questions.map((q,qi) => question(q,qi,section)).join('')}</div>${evidence(section,i)}</div></details>`;
   }).join('');
 
+  const layout = document.querySelector('.module-layout');
+  const moduleMain = document.querySelector('.module-main');
   const aside = document.querySelector('.module-aside');
-  aside.insertAdjacentHTML('beforeend', `<hr><h3>Project activity</h3><p>${data.activity}</p><a class="button secondary compact" href="../activities.html#activity-${moduleId}">Open activity</a><button class="button secondary compact" type="button" data-print-module>Print / Save PDF</button>`);
+  aside.classList.add('student-evidence');
+  aside.innerHTML = `<div><p class="eyebrow">Student evidence</p><h2>Your progress</h2><div class="progress-shell" aria-hidden="true"><div class="progress-bar" data-progress></div></div><p class="fine" data-progress-text></p><a href="../folio.html">Open My folio →</a></div><div><h3>In this module</h3><ol>${data.sections.map((section, index) => `<li><a href="#section-${index + 1}">${section.title}</a></li>`).join('')}</ol><h3>Project activity</h3><p>${data.activity}</p><a class="button secondary compact" href="../activities.html#activity-${moduleId}">Open activity</a><button class="button secondary compact" type="button" data-print-module>Print / Save PDF</button></div>`;
+  moduleMain.insertAdjacentHTML('beforebegin', presentation);
+  layout.insertBefore(aside, moduleMain);
+  document.querySelector('.module-main > .actions').classList.add('completion-panel', 'card');
   aside.querySelector('[data-print-module]').addEventListener('click', () => window.print());
 
   document.querySelectorAll('[data-check-one]').forEach(button => button.addEventListener('click', () => {

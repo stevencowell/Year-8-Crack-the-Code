@@ -1,0 +1,96 @@
+:root {
+  --module-max: 1180px;
+  --module-desktop-gutter: 36px;
+  --module-mobile-gutter: 32px;
+  --module-card-gap: 24px;
+  --module-collapse: 680px;
+}
+
+.module-standard-page .module-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--module-card-gap);
+  width: min(var(--module-max), calc(100% - var(--module-desktop-gutter)));
+}
+
+.module-standard-page .module-overview,
+.module-standard-page .student-evidence,
+.module-standard-page .completion-panel {
+  width: 100%;
+  min-width: 0;
+}
+
+.module-standard-page .module-overview {
+  min-height: 260px;
+  margin: 0;
+  padding: 21.6px;
+}
+
+.module-standard-page .student-evidence {
+  position: static;
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: 24px;
+  align-items: start;
+  padding: 21.6px;
+}
+
+.module-standard-page .student-evidence h2,
+.module-standard-page .student-evidence h3 {
+  margin-top: 0;
+}
+
+.module-standard-page .student-evidence ol {
+  margin-bottom: 1.2rem;
+}
+
+.module-standard-page .student-evidence .button {
+  margin: .35rem .45rem .35rem 0;
+}
+
+.module-standard-page .module-main {
+  display: grid;
+  gap: var(--module-card-gap);
+}
+
+.module-standard-page .module-main > section,
+.module-standard-page .module-main > [data-theory] > section,
+.module-standard-page .module-main > [data-theory] > aside,
+.module-standard-page .module-main > [data-theory] > figure,
+.module-standard-page .module-main > [data-theory] > details {
+  margin-top: 0;
+}
+
+.module-standard-page .completion-panel {
+  justify-content: space-between;
+  margin-top: 0;
+  padding: 21.6px;
+}
+
+@media (max-width: 680px) {
+  .module-standard-page .module-layout {
+    width: min(var(--module-max), calc(100% - var(--module-mobile-gutter)));
+  }
+
+  .module-standard-page .page-hero h1 {
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  .module-standard-page .module-overview,
+  .module-standard-page .student-evidence,
+  .module-standard-page .completion-panel {
+    padding: 21px 18px;
+  }
+
+  .module-standard-page .module-overview,
+  .module-standard-page .student-evidence {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .module-standard-page .presentation-download {
+    width: 100%;
+    white-space: normal;
+  }
+}
+
