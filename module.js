@@ -51,7 +51,7 @@
   const moduleMain = document.querySelector('.module-main');
   const aside = document.querySelector('.module-aside');
   aside.classList.add('student-evidence');
-  aside.innerHTML = `<div><p class="eyebrow">Student evidence</p><h2>Your progress</h2><div class="progress-shell" aria-hidden="true"><div class="progress-bar" data-progress></div></div><p class="fine" data-progress-text></p><a href="../folio.html">Open My folio →</a></div><div><h3>In this module</h3><ol>${data.sections.map((section, index) => `<li><a href="#section-${index + 1}">${section.title}</a></li>`).join('')}</ol><h3>Project activity</h3><p>${data.activity}</p><a class="button secondary compact" href="../activities.html#activity-${moduleId}">Open activity</a><button class="button secondary compact" type="button" data-print-module>Print / Save PDF</button></div>`;
+  aside.innerHTML = `<div><p class="eyebrow">Student evidence</p><h2>Your progress</h2><div class="progress-shell" aria-hidden="true"><div class="progress-bar" data-progress></div></div><p class="fine" data-progress-text></p><a href="../folio.html">Open My folio →</a></div><div><h3>Project activity</h3><p>${data.activity}</p><a class="button secondary compact" href="../activities.html#activity-${moduleId}">Open activity</a><button class="button secondary compact" type="button" data-print-module>Print / Save PDF</button></div>`;
   moduleMain.insertAdjacentHTML('beforebegin', presentation);
   layout.insertBefore(aside, moduleMain);
   document.querySelector('.module-main > .actions').classList.add('completion-panel', 'card');
